@@ -203,6 +203,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -391,7 +392,6 @@
 
 
 
-  <script src="//code.tidio.co/i0rdc7ddfau11wucvi7hijtt7ijdsvzp.js"></script>
 
 
 
@@ -402,6 +402,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '06e0f2e28f49bfea24f7',
+      clientSecret: '93ce2b08e18831686f83b059cf01e79840bb042a',
+      repo        : 'blog-comments',
+      owner       : 'DarthEric66',
+      admin       : ['EshsLeaks'],
+      id          : '3be7aa98d992907175cbd79c194399f2',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
   
 + 
 
@@ -410,7 +430,5 @@
 
 
  
-<script async src="//code.tidio.co/i0rdc7ddfau11wucvi7hijtt7ijdsvzp.js"></script>
-
 </body>
 </html>
